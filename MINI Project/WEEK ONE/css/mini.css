@@ -1,0 +1,171 @@
+* {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           font-family:'Poppins',sans-serif; 
+             background: url(/assets/librarypic2.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+        }
+
+        .login-box {
+            width: 350px;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+       
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            width: 50%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+             
+              
+        }
+
+        .login {
+           background:linear-gradient(135deg,#667eea,#764ba2,#f093fb);
+            color:white;
+            transition:0.3s; 
+        }
+
+        .reset {
+            background: #ddd;
+            color: black;
+        }
+
+        .login:hover{
+    box-shadow:
+        0 0 20px rgba(118, 75, 162, 0.6),
+        0 0 30px rgba(118, 75, 162, 0.5);
+}
+
+ .reset:hover{
+    box-shadow: 
+        0 0 20px rgba(173, 171, 174, 0.6),
+        0 0 30px rgba(127, 126, 129, 0.5);
+ } 
+
+ a{
+     margin-left:10px; 
+    text-decoration: none;
+ }
+
+ a:hover{
+    color: red;
+ }* {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           font-family:'Poppins',sans-serif; 
+             background: url(/assets/librarypic2.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+        }
+
+        .login-box {
+            width: 350px;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+       
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            width: 50%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+             
+              
+        }
+
+        .login {
+           background:linear-gradient(135deg,#667eea,#764ba2,#f093fb);
+            color:white;
+            transition:0.3s; 
+        }
+
+        .reset {
+            background: #ddd;
+            color: black;
+        }
+
+        .login:hover{
+    box-shadow:
+        0 0 20px rgba(118, 75, 162, 0.6),
+        0 0 30px rgba(118, 75, 162, 0.5);
+}
+
+ .reset:hover{
+    box-shadow: 
+        0 0 20px rgba(173, 171, 174, 0.6),
+        0 0 30px rgba(127, 126, 129, 0.5);
+ } 
+
+ a{
+     margin-left:10px; 
+    text-decoration: none;
+ }
+
+ a:hover{
+    color: red;
+ }

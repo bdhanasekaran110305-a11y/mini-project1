@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Book - Digital Library</title>
+    <link rel="stylesheet" href="../css/iss.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h2 class="logo">📚 Digital Library</h2>
+
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="../page/book.html">Books</a>
+            <a href="../page/member.html">Members</a>
+            <a href="issue-book.html" class="active">Issue Book</a>
+            <a href="return-book.html">Return Book</a>
+            <a href="reports.html">Reports</a>
+            <a href="about.html">About</a>
+            <a href="login.html">Logout</a>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <header class="page-header">
+            <div>
+                <span class="eyebrow">LIBRARY MANAGEMENT SYSTEM</span>
+                <h1>Issue <span>Book</span></h1>
+                <p>Issue books to library members and manage lending records.</p>
+            </div>
+
+            <div class="header-icon">📖</div>
+        </header>
+
+        <section class="stats">
+            <div class="stat-card blue">
+                <span class="stat-icon">📚</span>
+                <p>Total Issued</p>
+                <h2 id="totalIssued">0</h2>
+            </div>
+
+            <div class="stat-card green">
+                <span class="stat-icon">✅</span>
+                <p>Active Issues</p>
+                <h2 id="activeIssued">0</h2>
+            </div>
+
+            <div class="stat-card orange">
+                <span class="stat-icon">⏰</span>
+                <p>Overdue Books</p>
+                <h2 id="overdueBooks">0</h2>
+            </div>
+        </section>
+
+        <section class="form-card">
+            <div class="section-heading">
+                <div class="heading-icon">＋</div>
+                <div>
+                    <h2>Issue a New Book</h2>
+                    <p>Enter the book and member details below.</p>
+                </div>
+            </div>
+
+            <form id="issueForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="issueBookId">Book ID</label>
+                        <input
+                            type="text"
+                            id="issueBookId"
+                            placeholder="Example: B001"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="issueBookName">Book Name</label>
+                        <input
+                            type="text"
+                            id="issueBookName"
+                            placeholder="Enter book name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="memberId">Member ID</label>
+                        <input
+                            type="text"
+                            id="memberId"
+                            placeholder="Example: M001"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="memberName">Member Name</label>
+                        <input
+                            type="text"
+                            id="memberName"
+                            placeholder="Enter member name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="issueDate">Issue Date</label>
+                        <input type="date" id="issueDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dueDate">Due Date</label>
+                        <input type="date" id="dueDate" required>
+                    </div>
+
+                </div>
+
+                <div id="message" class="message" role="status"></div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">
+                        📖 Issue Book
+                    </button>
+
+                    <button type="reset" class="btn-secondary">
+                        Clear Form
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+        <section class="table-card">
+
+            <div class="table-heading">
+                <div>
+                    <h2>Issued Books</h2>
+                    <p>View and manage all lending records.</p>
+                </div>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search issued books..."
+                    aria-label="Search issued books"
+                >
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Book ID</th>
+                            <th>Book Name</th>
+                            <th>Member ID</th>
+                            <th>Member Name</th>
+                            <th>Issue Date</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="issueTable"></tbody>
+                </table>
+            </div>
+
+            <p id="emptyMessage" class="empty-message">
+                No books have been issued yet.
+            </p>
+
+        </section>
+
+        <footer>
+            © 2026 Digital Library Management System
+        </footer>
+
+    </main>
+
+    <script src="../js/is.js"></script>
+</body>
+</html>
+

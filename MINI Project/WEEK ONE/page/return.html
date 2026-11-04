@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Book | Digital Library</title>
+    <link rel="stylesheet" href="../css/ret.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">📚 <span>Digital Library</span></div>
+
+        <nav>
+            <a href="dashboard.html">🏠 Dashboard</a>
+            <a href="books.html">📚 Books</a>
+            <a href="members.html">👥 Members</a>
+            <a href="issue-book.html">📖 Issue Book</a>
+            <a href="return-book.html" class="active">↩ Return Book</a>
+            <a href="reports.html">📊 Reports</a>
+            <a href="about.html">ℹ About</a>
+        </nav>
+
+        <a href="login.html" class="logout">↪ Logout</a>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="welcome">LIBRARY MANAGEMENT SYSTEM</p>
+                <h1>Return <span>Book</span> ↩</h1>
+                <p class="subtitle">Manage returned books easily and quickly.</p>
+            </div>
+
+            <div class="profile">
+                <div class="profile-icon">👨‍🎓</div>
+                <div>
+                    <strong>Admin</strong>
+                    <small>Administrator</small>
+                </div>
+            </div>
+        </header>
+
+        <section class="stats">
+            <div class="stat-card blue">
+                <div class="stat-icon">📚</div>
+                <div>
+                    <p>Issued Books</p>
+                    <h2 id="issuedCount">0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card green">
+                <div class="stat-icon">✅</div>
+                <div>
+                    <p>Returned Books</p>
+                    <h2 id="returnedCount">0</h2>
+                </div>
+            </div>
+
+            <div class="stat-card orange">
+                <div class="stat-icon">⏰</div>
+                <div>
+                    <p>Overdue Books</p>
+                    <h2 id="overdueCount">0</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-card">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Return Book Management</h2>
+                    <p>Search for an issued book and record its return.</p>
+                </div>
+                <span class="live-badge">● LIVE RECORDS</span>
+            </div>
+
+            <div id="message" class="message"></div>
+
+            <div class="search-box">
+                <span>🔍</span>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search by book ID, book name, member name..."
+                >
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>BOOK DETAILS</th>
+                            <th>MEMBER NAME</th>
+                            <th>ISSUE DATE</th>
+                            <th>DUE DATE</th>
+                            <th>STATUS</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="returnTable">
+                        <tr>
+                            <td colspan="6" class="empty">
+                                Loading records...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-footer">
+                <span id="recordCount">0 records found</span>
+                <button class="refresh-btn" onclick="loadReturnBooks()">
+                    ↻ Refresh Records
+                </button>
+            </div>
+
+        </section>
+
+        <footer>
+            © 2026 Digital Library Management System
+        </footer>
+
+    </main>
+
+    <script src="../js/retu.js"></script>
+</body>
+</html>

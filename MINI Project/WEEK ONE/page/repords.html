@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Reports</title>
+    <link rel="stylesheet" href="../css/repo.css">
+</head>
+<body>
+
+<header class="navbar">
+    <h2>📚 Digital Library</h2>
+    <nav>
+        <a href="../dashboard.html">Dashboard</a>
+        <a href="books.html">Books</a>
+        <a href="member.html">Members</a>
+        <a href="issue-book.html">Issue Book</a>
+        <a href="return-book.html">Return Book</a>
+        <a href="reports.html" class="active">Reports</a>
+        <a href="about.html">About</a>
+        <a href="../login.html" class="logout">Logout</a>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="heading">
+        <h1>Library Reports</h1>
+        <p>View your library statistics and book records.</p>
+    </section>
+
+    <section class="stats">
+        <div class="stat-card blue">
+            <span>📚</span>
+            <h3>Total Books</h3>
+            <h2 id="totalBooks">0</h2>
+        </div>
+
+        <div class="stat-card green">
+            <span>👥</span>
+            <h3>Total Members</h3>
+            <h2 id="totalMembers">0</h2>
+        </div>
+
+        <div class="stat-card purple">
+            <span>📖</span>
+            <h3>Books Issued</h3>
+            <h2 id="totalIssued">0</h2>
+        </div>
+
+        <div class="stat-card orange">
+            <span>↩️</span>
+            <h3>Books Returned</h3>
+            <h2 id="totalReturned">0</h2>
+        </div>
+    </section>
+
+    <section class="report-box">
+        <h2>📊 Report Summary</h2>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Report Name</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Book Report</td>
+                        <td>Available books in the library</td>
+                        <td><span class="status">Available</span></td>
+                    </tr>
+                    <tr>
+                        <td>Member Report</td>
+                        <td>Registered library members</td>
+                        <td><span class="status">Available</span></td>
+                    </tr>
+                    <tr>
+                        <td>Issue Report</td>
+                        <td>Books currently issued</td>
+                        <td><span class="status">Available</span></td>
+                    </tr>
+                    <tr>
+                        <td>Return Report</td>
+                        <td>Books returned to the library</td>
+                        <td><span class="status">Available</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button onclick="window.print()">🖨️ Print Report</button>
+    </section>
+</main>
+
+<script>
+function readData(key) {
+    try {
+        const data = JSON.parse(localStorage.getItem(key) || "[]");
+        return Array.isArray(data) ? data : [];
+    } catch {
+        return [];
+    }
+}
+
+function loadReports() {
+    const books = readData("books");
+    const members = readData("members");
+    const issued = readData("issuedBooks");
+    const returned = readData("returnedBooks");
+
+    // Count book quantities when available
+    const bookCount = books.reduce((total, book) => {
+        return total + (Number(book.quantity) || 0);
+    }, 0);
+
+    document.getElementById("totalBooks").textContent =
+        bookCount;
+
+    document.getElementById("totalMembers").textContent =
+        members.length;
+
+    document.getElementById("totalIssued").textContent =
+        issued.length;
+
+    document.getElementById("totalReturned").textContent =
+        returned.length;
+}
+
+loadReports();
+</script>
+
+</body>
+</html>

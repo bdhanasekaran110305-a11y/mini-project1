@@ -1,0 +1,60 @@
+body{
+    
+    height:100vh; 
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: url(/assets/librarypic2.jpg);
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+
+.container{
+    width:400px;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(0,0,0,0.2);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#333;
+}
+
+.input-box{
+    margin-bottom:15px;
+}
+
+.input-box input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none; 
+}
+
+.btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(135deg,#667eea,#764ba2,#f093fb);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+     transition:0.3s; 
+}
+
+.btn:hover{
+    box-shadow:
+        0 0 20px rgba(118, 75, 162, 0.6),
+        0 0 30px rgba(118, 75, 162, 0.5);
+}
+
+a{
+text-decoration: none;
+color: white;
+}
